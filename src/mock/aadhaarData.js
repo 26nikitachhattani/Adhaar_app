@@ -88,6 +88,15 @@ const aadhaarData = [
     gender: "Female",
     address: "Sector 18, Noida",
     status: "Verified"
+  },
+  {
+    id: 11,
+    aadhaarNumber: "9161-4637-9444",
+    name: "Nikita Chattani",
+    dob: "26-05-1998",
+    gender: "Female",
+    address: "Priyadarshnai nagar sec 2 ",
+    status: "Verified"
   }
 ];
 
