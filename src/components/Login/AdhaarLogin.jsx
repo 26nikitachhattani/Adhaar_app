@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import {
   Box,
   Typography,
-  Tabs,
-  Tab,
+  // Tabs,
+  // Tab,
   //Button,
   //Divider,
 } from '@mui/material';
@@ -17,7 +17,6 @@ import FaceAuthTab from './FaceAuthTab';
 //import RightPanel from './RightPanel';
 
 // Custom CSS (separate import as requested)
-//ßimport '../;
 import './styles/AadhaarLogin.css';
 
 function TabPanel({ children, value, index }) {
@@ -67,7 +66,7 @@ export default function AadhaarLogin() {
           </Typography>
 
           {/* Auth method tabs */}
-          <Box className="auth-tabs-wrapper" sx={{ mb: 1.75 }}>
+          {/* <Box className="auth-tabs-wrapper" sx={{ mb: 1.75 }}>
             <Tabs
               value={activeTab}
               onChange={(_, v) => setActiveTab(v)}
@@ -78,7 +77,7 @@ export default function AadhaarLogin() {
               <Tab label="Biometric" />
               <Tab label="Face Auth" />
             </Tabs>
-          </Box>
+          </Box> */}
 
           {/* Tab Panels */}
           <TabPanel value={activeTab} index={0}>

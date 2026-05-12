@@ -43,6 +43,7 @@ export default function OTPLoginTab() {
   const handleOtpChange = (index, value) => {
     if (!/^\d*$/.test(value)) return;
     const newOtp = [...otp];
+    console.log('Before:', newOtp);
     newOtp[index] = value.slice(-1);
     setOtp(newOtp);
     if (value && index < 5) otpRefs.current[index + 1]?.focus();
@@ -95,6 +96,8 @@ export default function OTPLoginTab() {
       </Collapse>
 
       {/* Aadhaar Number */}
+      <Grid container spacing={1.25} alignItems="center">
+          <Grid item size={{md: 6, xs: 12}}>
       <TextField
         label="Aadhaar Number"
         placeholder="XXXX XXXX XXXX"
@@ -102,10 +105,16 @@ export default function OTPLoginTab() {
         onChange={handleAadhaarChange}
         inputProps={{ maxLength: 14, inputMode: 'numeric' }}
         InputProps={{ startAdornment: <BadgeIcon sx={{ color: '#B0BAC9', mr: 1, fontSize: 20 }} /> }}
-        sx={{ mb: 1.5 }}
+        // sx={{ mb: 1.5 }}
+        sx={{
+          width: '100%',
+          '& .MuiOutlinedInput-root': { borderRadius: '10px', backgroundColor: '#FAFBFD' }
+        }}
       />
+      </Grid>
 
       {/* Mobile Number */}
+      <Grid item size={{md: 6, xs: 12}}>
       <TextField
         label="Linked Mobile Number"
         placeholder="+91 XXXXX XXXXX"
@@ -113,8 +122,13 @@ export default function OTPLoginTab() {
         onChange={e => setMobile(e.target.value)}
         inputProps={{ maxLength: 14, inputMode: 'tel' }}
         InputProps={{ startAdornment: <PhoneAndroidIcon sx={{ color: '#B0BAC9', mr: 1, fontSize: 20 }} /> }}
-        sx={{ mb: 1.5 }}
+        sx={{
+          width: '100%',
+          '& .MuiOutlinedInput-root': { borderRadius: '10px', backgroundColor: '#FAFBFD' }
+        }}
       />
+      </Grid>
+      </Grid>
 
       {/* OTP Row */}
       <Box sx={{ mb: 1.5 }}>
