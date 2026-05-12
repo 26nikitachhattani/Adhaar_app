@@ -7,6 +7,7 @@ import {
   import Home from "../pages/Home"
   import About from "../pages/About"
   import Login from "../pages/Login"
+  import Detail from "../pages/Detail"
   
   
   function AppRoutes() {
@@ -28,6 +29,10 @@ import {
         <Route
           path="/login"
           element={<Login />}
+        />
+         <Route
+          path="/detail"
+          element={<Detail />}
         />
   
         <Route
