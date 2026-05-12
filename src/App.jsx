@@ -1,16 +1,16 @@
-import {
-  BrowserRouter
-} from "react-router-dom"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-import AppRoutes from "./routes/AppRoutes"
+import { Provider } from "react-redux";
+import store from "./store";
 
-function App() {
+import { BrowserRouter } from "react-router-dom";
 
-  return (
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Provider store={store}>
     <BrowserRouter>
-      <AppRoutes />
+      <App />
     </BrowserRouter>
-  )
-}
-
-export default App
+  </Provider>
+);
